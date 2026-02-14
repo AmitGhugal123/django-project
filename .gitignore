@@ -3,3 +3,34 @@ __pycache__/
 db.sqlite3
 .env
 *.pyc
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Tailwind build cache (optional but good)
+node_modules/
+theme/static_src/node_modules/
+
+# Tailwind compiled CSS (optional)
+theme/static/css/dist/
