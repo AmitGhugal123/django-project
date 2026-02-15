@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div style="
+max-width:700px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+text-align:center;
+">
+
+    <h1 style="margin-bottom:20px;">{{ student.name }}</h1>
+
+    {% if student.profile_pic %}
+        <img src="{{ student.profile_pic.url }}" 
+        style="
+        width:220px;
+        height:220px;
+        object-fit:cover;
+        border-radius:12px;
+        margin-bottom:20px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        ">
+    {% endif %}
+
+    <div style="font-size:18px; line-height:1.8; color:#444;">
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Age:</strong> {{ student.age }}</p>
+        <p><strong>Course:</strong> {{ student.course }}</p>
+        <p><strong>Joined:</strong> {{ student.joined_date }}</p>
+    </div>
+
+    <br>
+
+    <a href="{% url 'all_firstone' %}">
+        <button style="
+        margin-top:15px;
+        padding:10px 20px;
+        background:#ff6b00;
+        color:white;
+        border:none;
+        border-radius:8px;
+        font-size:16px;
+        cursor:pointer;
+        box-shadow:0 3px 8px rgba(0,0,0,0.2);
+        ">
+        ← Back to Students
+        </button>
+    </a>
+
+</div>
+
+{% endblock %}
